@@ -14,3 +14,23 @@ function ModalSuccess(){
         }
       });
     }
+  function ModalWarning(){
+      Swal.fire({
+          title: "Deseja finalizar a compra?",
+          text: "Você tem certeza disso??",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Finalizar!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({
+              title: "Compra finaliza!",
+              text: "Sua compra foi finalizada com sucesso!",
+              icon: "success"
+            });
+          }
+        });
+  
+  }
